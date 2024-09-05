@@ -12,10 +12,10 @@ class OnboardingScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
-            // first section : build header section
-            _buildHeaderSection(),
             // second section - for building the background image
             _buildBackgroundImage(),
+            // first section : build header section
+            _buildHeaderSection(),
             // third section -  gradient with start cooking button
             _buildGradientSection(context),
           ],
