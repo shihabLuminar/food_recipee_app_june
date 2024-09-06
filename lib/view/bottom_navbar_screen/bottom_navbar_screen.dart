@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipee_app_june/utils/constants/color_constants.dart';
+import 'package:food_recipee_app_june/view/bookmarks_screen/bookmark_screen.dart';
 import 'package:food_recipee_app_june/view/home_screen/home_screen.dart';
 
 class BottomNavbarScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
 
   List screens = [
     HomeScreen(),
-    Container(color: Colors.green),
+    BookmarkScreen(),
     Container(color: Colors.blue),
     Container(color: Colors.yellow),
   ];
