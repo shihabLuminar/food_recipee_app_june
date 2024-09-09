@@ -3,6 +3,7 @@ import 'package:food_recipee_app_june/dummy_db.dart';
 import 'package:food_recipee_app_june/utils/constants/color_constants.dart';
 import 'package:food_recipee_app_june/view/global_widgets/custom_video_card.dart';
 import 'package:food_recipee_app_june/view/home_screen/widgets/popular_category_card.dart';
+import 'package:food_recipee_app_june/view/recipee_details_screen/recipee_details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -150,6 +151,15 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => CustomVideoCard(
+              onCardTaped: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RecipeeDetailsScreen(
+                        recipeeTitle: DummyDb.trendingNowList[index]["title"],
+                      ),
+                    ));
+              },
               rating: DummyDb.trendingNowList[index]["rating"],
               duration: DummyDb.trendingNowList[index]["duration"],
               imageUrl: DummyDb.trendingNowList[index]["imageurl"],
