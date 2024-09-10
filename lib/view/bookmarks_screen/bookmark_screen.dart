@@ -53,7 +53,12 @@ class BookmarkScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => RecipeeDetailsScreen(
+                      rating: DummyDb.trendingNowList[index]["rating"],
                       recipeeTitle: DummyDb.trendingNowList[index]["title"],
+                      image: DummyDb.trendingNowList[index]["imageurl"],
+                      profileImage: DummyDb.trendingNowList[index]
+                          ["profileImage"],
+                      userName: DummyDb.trendingNowList[index]["userName"],
                     ),
                   ));
             },

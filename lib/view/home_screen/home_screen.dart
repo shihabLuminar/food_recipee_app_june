@@ -157,6 +157,11 @@ class HomeScreen extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) => RecipeeDetailsScreen(
                         recipeeTitle: DummyDb.trendingNowList[index]["title"],
+                        image: DummyDb.trendingNowList[index]["imageurl"],
+                        rating: DummyDb.trendingNowList[index]["rating"],
+                        profileImage: DummyDb.trendingNowList[index]
+                            ["profileImage"],
+                        userName: DummyDb.trendingNowList[index]["userName"],
                       ),
                     ));
               },
