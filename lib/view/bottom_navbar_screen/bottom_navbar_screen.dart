@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:food_recipee_app_june/utils/constants/color_constants.dart';
 import 'package:food_recipee_app_june/view/bookmarks_screen/bookmark_screen.dart';
+import 'package:food_recipee_app_june/view/create_recipee_screen/create_recipee_screen.dart';
 import 'package:food_recipee_app_june/view/home_screen/home_screen.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class BottomNavbarScreen extends StatefulWidget {
   const BottomNavbarScreen({super.key});
@@ -26,7 +30,13 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         backgroundColor: ColorConstants.primaryColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CreateRecipeeScreen(),
+              ));
+        },
         child: Icon(
           Icons.add,
           color: ColorConstants.mainWhite,
@@ -43,12 +53,15 @@ class _BottomNavbarScreenState extends State<BottomNavbarScreen> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
+              icon: FaIcon(FontAwesomeIcons.house),
               activeIcon: Icon(Icons.home),
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.bookmark_outline),
+              icon: HugeIcon(
+                icon: HugeIcons.strokeRoundedBookmark01,
+                color: Colors.black,
+              ),
               activeIcon: Icon(Icons.bookmark),
               label: "",
             ),
