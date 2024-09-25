@@ -3,10 +3,12 @@ import 'package:food_recipee_app_june/utils/constants/color_constants.dart';
 
 class CustomVideoCard extends StatelessWidget {
   String rating;
-  double width;
   String title;
-  String duration;
   String imageUrl;
+
+  double width;
+
+  String duration;
   String userName;
   String profileUrl;
   void Function()? onCardTaped;
